@@ -1,22 +1,15 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApplication.Controllers
+namespace AzureAuthTest3.Controllers
 {
     public class HomeController : Controller
     {
         public IActionResult Index()
         {
-            string message = "";
-            message = User.Identity.Name 
-                    + " | " + User.Identity.AuthenticationType.ToString()
-                    + " | " + User.Identity.IsAuthenticated.ToString();
-
-            ViewData["Message"] = message;      
-
             return View();
         }
 
